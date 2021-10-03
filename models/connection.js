@@ -6,11 +6,14 @@ var options = {
     useNewUrlParser: true
 }
 
-mongoose.connect('mongodb+srv://david:hgm4lRQq8QM1p3P8@cluster0-9xbpy.mongodb.net/mymovizapp?retryWrites=true&w=majority',
-    options,
-    function(err){
-        console.log(err)
+mongoose.connect('mongodb+srv://marina:nini@cluster0.iaqfd.mongodb.net/mymovizapp?retryWrites=true&w=majority',
+function(err) {
+    if (err) {
+      console.log(`error, failed to connect to the database because --> ${err}`);
+    } else {
+      console.info(' Chui connectée bébew (งツ)ว  ');
     }
+   }
 )
 
 module.exports = mongoose
